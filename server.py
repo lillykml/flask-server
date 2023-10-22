@@ -33,5 +33,13 @@ def get_weekly_steps():
 def get_weekly_mood():
     return {"weekly_mood": qd.dummy_mood}
 
+@app.route("/current_steps")
+def get_current_steps():
+    return {"current_steps": qd.current_steps}
+
+@app.route("/daily_max_stress")
+def get_daily_max_stress():
+    return {"daily_max_stress": qd.max_stress_level}
+
 if __name__ == "__main__":
     app.run(debug=True)

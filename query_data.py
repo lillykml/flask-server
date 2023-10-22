@@ -11,22 +11,24 @@ terra_user = terry.terra.from_user_id(uid)
  
 # want data for the past week
 end_date = datetime.now()
-week_ago = end_date - timedelta(days=7)
+week_ago = end_date - timedelta(days=8)
 
 weekly = terra_user.get_daily(start_date=week_ago, end_date=end_date, to_webhook = False)
+# print(weekly.json)
 weekly_data = weekly.json["data"]
+
 
 # functions for adding all data from a week
 def add_weekly3(weekly_data, data_list, field, subfield, subsubfield):
-    for i in range(7):
+    for i in range(3):
         data_list.append(weekly_data[i][field][subfield][subsubfield])
 
 def add_weekly2(weekly_data, data_list, field, subfield):
-    for i in range(7):
+    for i in range(3):
         data_list.append(weekly_data[i][field][subfield])
 
 def add_weekly1(weekly_data, data_list, field):
-    for i in range(7):
+    for i in range(3):
         data_list.append(weekly_data[i][field])
         
 weekly_avg_heartrate = []
@@ -46,3 +48,9 @@ add_weekly2(weekly_data, weekly_steps, "distance_data", "steps")
 # print(weekly_steps)
 
 dummy_mood = ['sad', 'happy', 'sad', 'neutral', 'neutral', 'happy', 'neutral']
+
+daily = weekly_data[0]
+
+current_steps = daily["distance_data"]["steps"]
+max_stress_level = daily["stress_data"]["max_stress_level"]
+

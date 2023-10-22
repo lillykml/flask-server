@@ -1,9 +1,10 @@
 import terry
-import authenticate_user as au
+# import authenticate_user as au
 from terra.base_client import Terra
 from datetime import datetime, timedelta
 
-uid = terry.get_uid_from_name(au.USERNAME)
+USERNAME = "lilly"
+uid = terry.get_uid_from_name(USERNAME)
 
 # Create a user object
 #This is the userid from the user I just created

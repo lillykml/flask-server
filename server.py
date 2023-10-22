@@ -35,19 +35,19 @@ def get_weekly_mood():
 
 @app.route("/current_steps")
 def get_current_steps():
-    return {"current_steps": qd.current_steps}
+    return {"value": qd.current_steps}
 
 @app.route("/daily_max_stress")
 def get_daily_max_stress():
-    return {"daily_max_stress": qd.max_stress_level}
+    return {"value": qd.max_stress_level}
 
 @app.route("/daily_avg_heart_rate")
 def get_daily_avg_heart_rate():
-    return {"daily_avg_heart_rate": qd.daily_avg_heart_rate}
+    return {"value": qd.daily_avg_heart_rate}
 
 @app.route("/daily_mood")
 def get_daily_mood():
-    return {"daily_mood": qd.daily_mood}
+    return {"value": qd.daily_mood}
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -47,10 +47,12 @@ weekly_steps = []
 add_weekly2(weekly_data, weekly_steps, "distance_data", "steps")
 # print(weekly_steps)
 
-dummy_mood = ['sad', 'happy', 'sad', 'neutral', 'neutral', 'happy', 'neutral']
+dummy_mood = ['neutral', 'happy', 'sad', 'neutral', 'neutral', 'happy', 'neutral']
 
 daily = weekly_data[0]
 
 current_steps = daily["distance_data"]["steps"]
 max_stress_level = daily["stress_data"]["max_stress_level"]
+daily_avg_heart_rate = daily["heart_rate_data"]["summary"]["avg_hr_bpm"]
+daily_mood = dummy_mood[0]
 

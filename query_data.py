@@ -3,7 +3,7 @@ import terry
 from terra.base_client import Terra
 from datetime import datetime, timedelta
 
-USERNAME = "lillykml"
+USERNAME = "lilly"
 uid = terry.get_uid_from_name(USERNAME)
 
 # Create a user object
@@ -54,6 +54,6 @@ daily = weekly_data[0]
 
 current_steps = daily["distance_data"]["steps"]
 max_stress_level = daily["stress_data"]["max_stress_level"]
-daily_avg_heart_rate = daily["heart_rate_data"]["summary"]["avg_hr_bpm"]
+daily_avg_heart_rate = round(daily["heart_rate_data"]["summary"]["avg_hr_bpm"])
 daily_mood = dummy_mood[0]
 

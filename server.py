@@ -41,7 +41,7 @@ def get_current_steps():
 def get_daily_max_stress():
     return {"daily_max_stress": qd.max_stress_level}
 
-@app.route("/daily_avg_heart_Rate")
+@app.route("/daily_avg_heart_rate")
 def get_daily_avg_heart_rate():
     return {"daily_avg_heart_rate": qd.daily_avg_heart_rate}
 

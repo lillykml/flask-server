@@ -42,11 +42,11 @@ def list_users():
 
 def get_uid_from_name(ref_id):
     users = terra.list_users()
-    for i in range(len(users.json)):
+    for i in range(len(users.json["users"])):
         if users.json["users"][i]["reference_id"] == ref_id:
             return users.json["users"][i]["user_id"]
 
-# list_users()
+list_users()
 
 # generate_widget_url("test_user")
 

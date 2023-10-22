@@ -3,7 +3,7 @@ import terry
 from terra.base_client import Terra
 from datetime import datetime, timedelta
 
-USERNAME = "lilly"
+USERNAME = "lillykml"
 uid = terry.get_uid_from_name(USERNAME)
 
 # Create a user object
